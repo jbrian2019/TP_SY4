@@ -77,7 +77,7 @@ void uartWrite(uint8_t c) {
 void _uartPrint(char * str) {
 	int i=0;
 	while(str[i] != 0) uartWrite(str[i++]);
-	}
+}
 
 
 /**************************************/
@@ -100,8 +100,6 @@ void uartHexaPrint(uint8_t * val,uint8_t n){
 			uartWrite(v + 48);
 		else
 			uartWrite(v - 10 + 65);
-
-		
 	}
 }
 
@@ -109,9 +107,11 @@ void uartHexaPrint(uint8_t * val,uint8_t n){
 /*** VT100 effacement de l'écran    ***/
 /***                                ***/
 /**************************************/
-void vT100ClearScreen(void){
-    uartPrint("\x1b[2J");
+void vT100tEraseScreen(void) {
+    _uartPrint("\x1b[2J");
 }
+
+
 
 
 
@@ -122,13 +122,19 @@ void vT100ClearScreen(void){
 /*** de scrolling                   ***/
 /**************************************/
 
-// A FAIRE
+void defineScrollingWindow(void) {
+    //todo
+}
+
 
 
 /**************************************/
 /*** VT100 Scroll d'une ligne       ***/
 /*** vers le bas                    ***/
 /**************************************/
+void vT100DownScrolling(void) {
+    //todo
+}
 
 // A FAIRE
 
@@ -148,20 +154,25 @@ void vT100EraseEndOfLine(void){
 
 
 
+
 /**************************************/
 /*** VT100 sauvegarde et            ***/
 /*** restauration du curseur        ***/
 /**************************************/
-void vT100SetCursorPos(uint8_t r,uint8_t c){
-	char Cmd[] = "\x1b[00;00f"; 	
 
-	Cmd[2]+=r/10;
-	Cmd[3]+=r%10;
-	Cmd[5]+=c/10;
-	Cmd[6]+=c%10;
-	uartPrint(Cmd);
-
+void vT100SetCursorPos(uint8_t r, uint8_t c){
+    char Cmd[]= "\x1b[00;00f";
+    
+    Cmd[2]+= r/10;
+    Cmd[3]+=r%10;
+    Cmd[4]+=c/10;
+    Cmd[5]+=c%10;            
+         
+    _uartPrint(Cmd);
 }
+
+
+
 
 /**************************************/
 /*** VT100 placement curseur        ***/

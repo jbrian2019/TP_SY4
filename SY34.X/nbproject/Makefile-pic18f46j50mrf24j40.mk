@@ -39,7 +39,7 @@ FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
-COMPARISON_BUILD=-mafrlcsj
+COMPARISON_BUILD=--mafrlcsj
 else
 COMPARISON_BUILD=
 endif
@@ -70,7 +70,6 @@ OBJECTFILES=${OBJECTDIR}/_ext/1641867091/button.p1 ${OBJECTDIR}/_ext/1641867091/
 SOURCEFILES=../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c ../../MLA/framework/miwi/src/miwi_mesh.c ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c
 
 
-
 CFLAGS=
 ASFLAGS=
 LDLIBSOPTIONS=
@@ -94,196 +93,196 @@ MP_PROCESSOR_OPTION=18F46J50
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1641867091/button.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/button.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/button.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/button.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/button.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/button.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/button.d ${OBJECTDIR}/_ext/1641867091/button.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/button.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/console.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/console.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/console.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/console.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/console.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/console.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/console.d ${OBJECTDIR}/_ext/1641867091/console.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/console.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/delay.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/delay.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/delay.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/delay.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/delay.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/delay.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/delay.d ${OBJECTDIR}/_ext/1641867091/delay.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/eeprom.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/eeprom.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/eeprom.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/eeprom.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/eeprom.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/eeprom.d ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/lcd.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/lcd.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/lcd.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/lcd.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/lcd.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/lcd.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/lcd.d ${OBJECTDIR}/_ext/1641867091/lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/spi.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/spi.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/spi.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/spi.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/spi.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/spi.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/spi.d ${OBJECTDIR}/_ext/1641867091/spi.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/symbol.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/symbol.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/symbol.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/symbol.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/symbol.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/symbol.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/symbol.d ${OBJECTDIR}/_ext/1641867091/symbol.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/symbol.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/system.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/system.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/system.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/system.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/system.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/system.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/system.d ${OBJECTDIR}/_ext/1641867091/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/212987836/main.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/212987836/main.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/212987836" 
 	@${RM} ${OBJECTDIR}/_ext/212987836/main.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/212987836/main.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/212987836/main.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/212987836/main.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c 
 	@-${MV} ${OBJECTDIR}/_ext/212987836/main.d ${OBJECTDIR}/_ext/212987836/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/212987836/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/212987836/VT100.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/212987836/VT100.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/212987836" 
 	@${RM} ${OBJECTDIR}/_ext/212987836/VT100.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/212987836/VT100.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/212987836/VT100.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/212987836/VT100.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c 
 	@-${MV} ${OBJECTDIR}/_ext/212987836/VT100.d ${OBJECTDIR}/_ext/212987836/VT100.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/212987836/VT100.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/5654785/miwi_mesh.p1: ../../MLA/framework/miwi/src/miwi_mesh.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/5654785/miwi_mesh.p1: ../../MLA/framework/miwi/src/miwi_mesh.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/5654785" 
 	@${RM} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 ../../MLA/framework/miwi/src/miwi_mesh.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 ../../MLA/framework/miwi/src/miwi_mesh.c 
 	@-${MV} ${OBJECTDIR}/_ext/5654785/miwi_mesh.d ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1: ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1: ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1356036458" 
 	@${RM} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1  --debugger=icd3  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c 
 	@-${MV} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.d ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/_ext/1641867091/button.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/button.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/button.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/button.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/button.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/button.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/button.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/button.d ${OBJECTDIR}/_ext/1641867091/button.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/button.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/console.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/console.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/console.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/console.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/console.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/console.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/console.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/console.d ${OBJECTDIR}/_ext/1641867091/console.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/console.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/delay.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/delay.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/delay.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/delay.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/delay.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/delay.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/delay.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/delay.d ${OBJECTDIR}/_ext/1641867091/delay.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/delay.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/eeprom.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/eeprom.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/eeprom.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/eeprom.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/eeprom.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/eeprom.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/eeprom.d ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/eeprom.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/lcd.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/lcd.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/lcd.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/lcd.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/lcd.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/lcd.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/lcd.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/lcd.d ${OBJECTDIR}/_ext/1641867091/lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/spi.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/spi.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/spi.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/spi.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/spi.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/spi.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/spi.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/spi.d ${OBJECTDIR}/_ext/1641867091/spi.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/spi.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/symbol.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/symbol.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/symbol.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/symbol.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/symbol.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/symbol.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/symbol.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/symbol.d ${OBJECTDIR}/_ext/1641867091/symbol.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/symbol.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1641867091/system.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1641867091/system.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1641867091" 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/system.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1641867091/system.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1641867091/system.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1641867091/system.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40/system.c 
 	@-${MV} ${OBJECTDIR}/_ext/1641867091/system.d ${OBJECTDIR}/_ext/1641867091/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1641867091/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/212987836/main.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/212987836/main.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/212987836" 
 	@${RM} ${OBJECTDIR}/_ext/212987836/main.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/212987836/main.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/212987836/main.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/212987836/main.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/main.c 
 	@-${MV} ${OBJECTDIR}/_ext/212987836/main.d ${OBJECTDIR}/_ext/212987836/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/212987836/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/212987836/VT100.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/212987836/VT100.p1: ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/212987836" 
 	@${RM} ${OBJECTDIR}/_ext/212987836/VT100.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/212987836/VT100.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/212987836/VT100.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/212987836/VT100.p1 ../8bitswdk_pic18f46j50_24j40/firmware/src/VT100.c 
 	@-${MV} ${OBJECTDIR}/_ext/212987836/VT100.d ${OBJECTDIR}/_ext/212987836/VT100.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/212987836/VT100.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/5654785/miwi_mesh.p1: ../../MLA/framework/miwi/src/miwi_mesh.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/5654785/miwi_mesh.p1: ../../MLA/framework/miwi/src/miwi_mesh.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/5654785" 
 	@${RM} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 ../../MLA/framework/miwi/src/miwi_mesh.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/5654785/miwi_mesh.p1 ../../MLA/framework/miwi/src/miwi_mesh.c 
 	@-${MV} ${OBJECTDIR}/_ext/5654785/miwi_mesh.d ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/5654785/miwi_mesh.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1: ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1: ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1356036458" 
 	@${RM} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d 
 	@${RM} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -o${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1 ../../MLA/framework/driver/mrf_miwi/src/drv_mrf_miwi_24j40.c 
 	@-${MV} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.d ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1356036458/drv_mrf_miwi_24j40.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
@@ -296,23 +295,17 @@ else
 endif
 
 # ------------------------------------------------------------------------------------
-# Rules for buildStep: assembleWithPreprocess
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-else
-endif
-
-# ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.map  -D__DEBUG=1  -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto        $(COMPARISON_BUILD) -Wl,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -o dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.map  -D__DEBUG=1  --debugger=icd3  -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"        $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	@${RM} dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.hex 
 	
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.map  -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" -mwarn=0 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -o dist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.map  -DXPRJ_pic18f46j50mrf24j40=$(CND_CONF)  --double=32 --float=32 --emi=wordwrite --opt=none --addrqual=ignore -P -N255 -I"../8bitswdk_pic18f46j50_24j40/firmware/src/system_config/8bitwdk_pic18f46j50_24j40" -I"../../MLA/framework" --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/SY34.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 endif
 
