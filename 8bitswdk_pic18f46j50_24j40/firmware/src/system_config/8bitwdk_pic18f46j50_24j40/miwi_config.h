@@ -146,14 +146,14 @@
 // EUI_x defines the xth byte of permanent address for the wireless
 // node
 /*********************************************************************/
-#define EUI_7 0x34
-#define EUI_6 0x66
-#define EUI_5 0x55
-#define EUI_4 0x44
+#define EUI_7 0x38
+#define EUI_6 0x67
+#define EUI_5 0x56
+#define EUI_4 0x45
 #define EUI_3 0x33
-#define EUI_2 0x22
-#define EUI_1 0x11
-#define EUI_0 0x00
+#define EUI_2 0x23
+#define EUI_1 0x12
+#define EUI_0 0x01
 
 /*********************************************************************/
 // TX_BUFFER_SIZE defines the maximum size of application payload
